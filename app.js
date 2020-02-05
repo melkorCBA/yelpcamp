@@ -58,8 +58,9 @@ app.use(indexRoutes);
 //seedDB();
 
 //create db
-mongoose.connect("mongodb+srv://cba:Messi@1996@yelpcamp-8wf1h.mongodb.net/test", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
-
+var URL=process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
+mongoose.connect(URL, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+//console.log(process.env.DATABASEURL);
 app.set("view engine", "ejs");
 
 //make available custom style sheets
