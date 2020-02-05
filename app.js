@@ -60,7 +60,7 @@ app.use(indexRoutes);
 //create db
 var URL=process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
 mongoose.connect(URL, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
-//console.log(process.env.DATABASEURL);
+console.log(process.env.DATABASEURL);
 app.set("view engine", "ejs");
 
 //make available custom style sheets
