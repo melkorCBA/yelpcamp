@@ -58,7 +58,7 @@ app.use(indexRoutes);
 //seedDB();
 
 //create db
-mongoose.connect("mongodb://localhost/yelp_camp", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+mongoose.connect("mongodb+srv://cba:Messi@1996@yelpcamp-8wf1h.mongodb.net/test", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 
 app.set("view engine", "ejs");
 
